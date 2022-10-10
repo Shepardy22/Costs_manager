@@ -1,21 +1,33 @@
 {
-    "projects": [],
-    "categorias": [
-        {
-            "id": 1,
-            "name": "Infra "
-        },
-        {
-            "id": 2,
-            "name": "Desenvolvimento"
-        },
-        {
-            "id": 3,
-            "name": "Design"
-        },
-        {
-            "id": 4,
-            "name": "Planejamento"
-        }
-    ]
+  "projetos": [
+    {
+      "name": "site",
+      "budget": "2000",
+      "categoria": {
+        "id": "2",
+        "nome": "Desenvolvimento"
+      },
+      "costs": 0,
+      "services": [],
+      "id": 1
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "name": "Infra "
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
 }
