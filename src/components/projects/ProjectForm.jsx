@@ -3,7 +3,26 @@ import Select from '../form/Select'
 import SubmitButton from '../form/SubmitButton'
 import Styles from './ProjectForm.module.css'
 
-function ProjectForm({btnText}) {
+import { useEffect, useState } from 'react'
+
+function ProjectForm({ btnText }) {
+
+    const [categorias, setCategorias] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/categorias', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => response.json())
+            .then(data => setCategorias(data))
+            .catch(error => console.error('Error:', error))
+    },
+        [])
+
+
+
     return (
         <form className={Styles.form}>
             <div>
@@ -20,10 +39,8 @@ function ProjectForm({btnText}) {
                     name="valorTotal"
                     text="Orçamento Total" />
             </div>
-            <Select
-                name="categoriaID"
-                text="Criar projeto"
-            />
+            <Select name="categoriaID" text="Criar projeto" options={categorias} />
+
             <SubmitButton text={btnText} />
         </form>
 
