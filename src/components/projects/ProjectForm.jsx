@@ -38,8 +38,7 @@ function ProjectForm({ btnText, handleSubmit, projectData }) {
         //  console.log(project)
     }
     function handleCategoria  (event)  {
-        setProject({
-            ...project, categoria: {
+        setProject({...project, categoria: {
                 id: event.target.value,
                 nome: event.target.options[event.target.selectedIndex].text
             },
