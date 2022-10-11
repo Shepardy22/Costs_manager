@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import Container from "../layout/Container";
 import LinkButton from "../layout/LinkButton";
 import ProjectCard from "../projects/ProjectCard";
+import Loading from "../layout/Loading";
 
 import Styles from './Projetos.module.css'
 
 function Projects() {
 
     const [projects, setProjects] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     const location = useLocation()
     let message = ''
@@ -19,7 +21,8 @@ function Projects() {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/projetos', {
+        setTimeout(() => {
+            fetch('http://localhost:5000/projetos', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -29,8 +32,10 @@ function Projects() {
             .then(data => {
                 // console.log(data)
                 setProjects(data)
+                setLoading(true)
             })
             .catch(error => console.log(error))
+        }, 300)
     }, [])
 
     return (
@@ -53,6 +58,8 @@ function Projects() {
                             key={project.id} 
                             />
                         ))}
+                        {!loading && <Loading />}
+                        {loading && projects.length === 0 && <p>Nenhum projeto encontrado</p>}
 
             </Container>
 
