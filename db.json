@@ -10,6 +10,17 @@
       "costs": 0,
       "services": [],
       "id": 1
+    },
+    {
+      "name": "Lavagem",
+      "budget": "5000",
+      "category": {
+        "id": "4",
+        "nome": "Planejamento"
+      },
+      "costs": 0,
+      "services": [],
+      "id": 2
     }
   ],
   "category": [
