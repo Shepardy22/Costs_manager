@@ -1,39 +1,5 @@
 {
-  "projetos": [
-    {
-      "name": "site",
-      "budget": "2000",
-      "category": {
-        "id": "2",
-        "nome": "Desenvolvimento"
-      },
-      "costs": 0,
-      "services": [],
-      "id": 1
-    },
-    {
-      "name": "develop",
-      "budget": "2000",
-      "category": {
-        "id": "1",
-        "nome": "Infra"
-      },
-      "costs": 0,
-      "services": [],
-      "id": 2
-    },
-    {
-      "category": {
-        "id": "3",
-        "nome": "Design"
-      },
-      "name": "Fotos",
-      "budget": "5000",
-      "costs": 0,
-      "services": [],
-      "id": 3
-    }
-  ],
+  "projetos": [],
   "category": [
     {
       "id": 1,
