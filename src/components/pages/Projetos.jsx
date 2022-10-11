@@ -36,7 +36,7 @@ function Projects() {
                 setLoading(true)
             })
             .catch(error => console.log(error))
-        }, 300)
+        }, 200)
     }, [])
 
     function removeProject(id) {
