@@ -7,12 +7,12 @@ import { useEffect, useState } from 'react'
 
 function ProjectForm({ btnText, handleSubmit, projectData }) {
 
-    const [categorias, setCategorias] = useState([])
+    const [category, setCategorias] = useState([])
     const [project, setProject] = useState(projectData || {})
 
     //pegar categorias
     useEffect(() => {
-        fetch('http://localhost:5000/categorias', {
+        fetch('http://localhost:5000/category', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ function ProjectForm({ btnText, handleSubmit, projectData }) {
         //  console.log(project)
     }
     function handleCategoria  (event)  {
-        setProject({...project, categoria: {
+        setProject({...project, category: {
                 id: event.target.value,
                 nome: event.target.options[event.target.selectedIndex].text
             },
@@ -70,9 +70,9 @@ function ProjectForm({ btnText, handleSubmit, projectData }) {
             </div>
                 <Select name="categoriaID"
                 text="Criar projeto"
-                options={categorias}
+                options={category}
                 handleChange={handleCategoria}
-                value={project.categoria ? project.categoria.id : ''} />
+                value={project.category ? project.category.id : ''} />
 
             <SubmitButton text={btnText} />
         </form>
