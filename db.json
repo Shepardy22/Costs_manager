@@ -2,25 +2,14 @@
   "projetos": [
     {
       "name": "develop",
-      "budget": "10000",
+      "budget": "1000",
       "category": {
-        "id": "4",
-        "nome": "Planejamento"
+        "id": "2",
+        "nome": "Desenvolvimento"
       },
       "costs": 0,
       "services": [],
       "id": 1
-    },
-    {
-      "name": "orçamento",
-      "budget": "20500",
-      "category": {
-        "id": "1",
-        "nome": "Infra"
-      },
-      "costs": 0,
-      "services": [],
-      "id": 2
     }
   ],
   "category": [
