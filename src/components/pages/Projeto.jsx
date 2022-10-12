@@ -6,7 +6,7 @@ import Container from '../layout/Container';
 import ProjectForm from '../projects/ProjectForm';
 import Message from '../layout/Message';
 import ServiceForm from '../service/ServiceForm';
-import {parse, v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4} from 'uuid'
 import ServiceCard from '../service/ServiceCard';
 
 
@@ -34,14 +34,13 @@ function Projeto() {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
+                    // console.log(data)
                     setProject(data)
                     setServices(data.services)
-                    console.log(` serviços:${services}`)
                 })
                 .catch(error => console.log(error))
         }, 200)
-    }, [id, services])
+    }, [id ])
 
     //Edita o projeto e faz um PATH na API
     function editPost(project) {
@@ -107,7 +106,7 @@ function Projeto() {
 
     //Deleta um serviço e atualiza o estado
     function removeService(id, cost){
-        const serviceUpdate = project.services.filter(service => service.id !== id)
+        const serviceUpdate = project.services.filter((service) => service.id !== id)
         
         const projetoUpdated = project
 
@@ -124,6 +123,7 @@ function Projeto() {
             .then((response) => response.json())
             .then((data) => {
                setProject(projetoUpdated)
+                setServices(serviceUpdate)
                 setMessage('Serviço removido com sucesso!')
                 setType('success')
             })
@@ -194,11 +194,11 @@ function Projeto() {
                                     />
                                 )}
                             </div>
+                            
                         </div>
 
                         <h2>Serviços</h2>
                         <Container customClass='start'>
-                            {console.log(services)}
                             {services.length > 0 &&
                                 services.map((service) => (
                                     <ServiceCard
@@ -206,7 +206,7 @@ function Projeto() {
                                     name={service.name}
                                     cost={service.cost}
                                     descricao={service.descricao}
-                                    key={service.key}
+                                    key={service.id}
                                     handleRemove={removeService}
                                     />
                                 ))

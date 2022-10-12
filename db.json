@@ -7,20 +7,16 @@
         "id": "2",
         "nome": "Desenvolvimento"
       },
-      "costs": 0,
-      "services": [],
+      "costs": 100,
+      "services": [
+        {
+          "name": "limpesa",
+          "cost": "200",
+          "descricao": "limpesa do local",
+          "id": "fba4d59e-5a18-4810-bf1a-48550218b97c"
+        }
+      ],
       "id": 1
-    },
-    {
-      "name": "Lavagem",
-      "budget": "5000",
-      "category": {
-        "id": "4",
-        "nome": "Planejamento"
-      },
-      "costs": 0,
-      "services": [],
-      "id": 2
     }
   ],
   "category": [
