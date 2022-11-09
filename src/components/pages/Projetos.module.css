@@ -1,9 +1,10 @@
 .project_container{
     padding: 2em;
+    
 }
 
 .tile_container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 2em;
 }

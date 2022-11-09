@@ -26,7 +26,7 @@ function Projeto() {
     useEffect(() => {
         //para ver o loading
         setTimeout(() => {
-            fetch(`http://localhost:5000/projetos/${id}`, {
+            fetch(`https://my-json-server.typicode.com/Shepardy22/Costs_manager/projetos/${id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

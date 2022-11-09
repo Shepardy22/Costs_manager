@@ -13,7 +13,7 @@ function Novoprojeto() {
     project.costs = 0
     project.services = []
 
-    fetch('http://localhost:5000/projetos', {
+    fetch('https://my-json-server.typicode.com/Shepardy22/Costs_manager/projetos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', },
       body: JSON.stringify(project),

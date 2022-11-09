@@ -12,7 +12,7 @@ function ProjectForm({ btnText, handleSubmit, projectData }) {
 
     //pegar categorias
     useEffect(() => {
-        fetch('http://localhost:5000/category', {
+        fetch('https://my-json-server.typicode.com/Shepardy22/Costs_manager/category', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

@@ -1,6 +1,6 @@
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #222;
     padding: 1em;
 }
@@ -9,6 +9,7 @@
     display: flex;
     list-style: none;
     align-items: center;
+    margin-right: 6em;
 }
 
 .item{
@@ -18,6 +19,7 @@
 .item a{
     text-decoration: none;
     color: #fff;
+    font-size: 1.5em;
 }
 
 .item a:hover{

@@ -10,7 +10,7 @@ return (
             <li ><FaLinkedin /></li>
         </ul>
         <p className={Styles.copy_right}>
-            <span>Costs</span> &copy; 2022
+        Desenvolvido por <span>Yuri Nunes</span> 
         </p>
 
     </footer>
